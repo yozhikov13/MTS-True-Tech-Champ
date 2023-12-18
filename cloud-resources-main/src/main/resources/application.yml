@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: runner
+  jackson:
+    default-property-inclusion: non_null
+  main:
+    banner-mode: off
+
+logging:
+  level:
+    com:
+      codenrock:
+        cloud: ${LOGGER_CODENROCK:DEBUG}
+
+application:
+  schedule-rate: ${SCHEDULE_RATE:60}
+  base-url: ${BASE_URL:https://mts-olimp-cloud.codenrock.com/api}
+  token: ${TOKEN:z1WWH6uorsrTIxbuQ7YWYAurgVbuTUDs}
+  cpu-load-max: ${CPU_LOAD_MAX:90}
+  memory-load-max: ${MEMORY_LOAD_MAX:90}
+  delta: ${DELTA:15}
+
+
